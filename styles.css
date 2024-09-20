@@ -1,0 +1,36 @@
+/* Keep the star and text styles from earlier */
+
+.iframe-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Input field and button styling */
+#urlInput {
+    width: 60%;
+    padding: 10px;
+    font-size: 1em;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
