@@ -1,12 +1,15 @@
-// Handle the form submission
+// Handle form submission for the proxy unblocker
 document.getElementById('unblockForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const urlInput = document.getElementById('urlInput').value;
     const iframe = document.getElementById('unblockFrame');
 
-    // If the URL doesn't have http/https, prepend it
+    // Proxy URL (using CORS Anywhere)
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+
+    // Add http:// if it's missing
     let formattedUrl = urlInput.startsWith('http') ? urlInput : `http://${urlInput}`;
 
-    // Set the iframe source to the entered URL
-    iframe.src = formattedUrl;
+    // Load the URL via the proxy into the iframe
+    iframe.src = proxyUrl + formattedUrl;
 });
