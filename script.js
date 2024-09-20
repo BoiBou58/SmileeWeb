@@ -1,11 +1,11 @@
+// Use corsproxy.io as the proxy service
+const proxyUrl = "https://corsproxy.io/?";
+
 // Handle form submission for the proxy unblocker
 document.getElementById('unblockForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const urlInput = document.getElementById('urlInput').value;
     const iframe = document.getElementById('unblockFrame');
-
-    // Proxy URL (using CORS Anywhere)
-    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
     // Add http:// if it's missing
     let formattedUrl = urlInput.startsWith('http') ? urlInput : `http://${urlInput}`;
